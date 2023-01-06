@@ -6,8 +6,132 @@
 </head>
 <body>
 
-<h1>목록관련태드</h1>
+<h1>목록관련태그</h1>
 <h2>개요</h2>
 <p>깔금한 정보전달을 위해 여러 요소들을 일렬로 나열한 명단이나 목록을 의미</p>
+
+<h2>순서없는 unordered목록</h2>
+<P>명단의 요소를 기호로 나타내는 목록의 형태
+ul,li태그등을 이용해서 표현
+목록에 사용하는 기호는 circle,square,disc등</P>
+
+<p>내가 좋아하는 점심메뉴</p>
+<ul style="list-style-type: circle">
+    <li>라면</li>
+    <li>돈가스</li>
+    <li>불고기</li>
+    <li>김치</li>
+    <li>민트초코</li>
+    <p>내가 좋아하는 점심메뉴</p>
+    <ul style="list-style-type: square">
+    <li>라면</li>
+    <li>돈가스</li>
+    <li>불고기</li>
+    <li>김치</li>
+    <li>민트초코</li>
+
+    <ul style="list-style-type: disc">
+    <li>라면</li>
+    <li>돈가스</li>
+    <li>불고기</li>
+    <li>김치</li>
+    <li>민트초코</li>
+
+</ul>
+
+
+        <h2>순서있는ordered목록</h2>
+        <P>명단의 요소를 기호로 나타내는 목록의 형태
+            ol,li태그등을 이용해서 표현
+            목록에 사용하는 기호는 숫자 decimal, alpha, raman 알파벳 한들등</P>
+
+        <p>내가 좋아하는 점심메뉴</p>
+        <ol style="list-style-type: ">
+            <li>라면</li>
+            <li>돈가스</li>
+            <li>불고기</li>
+            <li>김치</li>
+            <li>민트초코</li>
+        </ol>
+
+            <p>내가 좋아하는 점심메뉴</p>
+            <ol style="list-style-type: lower-alpha">
+                <li>라면</li>
+                <li>돈가스</li>
+                <li>불고기</li>
+                <li>김치</li>
+                <li>민트초코</li>
+            </ol>
+
+                <p>내가 좋아하는 점심메뉴</p>
+                <ol style="list-style-type: hangul"> <!--한글 글머리기호-->
+                    <li>라면</li>
+                    <li>돈가스</li>
+                    <li>불고기</li>
+                    <li>김치</li>
+                    <li>민트초코</li>
+                </ol>
+
+        <h2>정의 목록</h2>
+        <p>용어와 그 용어에 대한 해설을 모아 놓은 목록
+        dl태그로 목록의 시작을 dt태그로 용어의 이름을 dd태그로 해당 옹어의 해설을</p>
+
+        <h3>웹표준용어</h3>
+        <dl>
+        <dt> html</dt>
+            <dd>웹사이트를 사용하는 웹문서 작성에 사용하는 마크업 언어</dd>
+
+
+            <dt> css</dt>
+            <dd>html를 사용하는 작성된 문서를 시각적으로 구밀때 사용언어</dd>
+
+            <dt> javascript</dt>
+            <dd>html를 사용하는 객체기반언어</dd>
+
+        </dl>
+        <h2>목록 중첩 nested하기</h2>
+        <p> 목록을 구성하는 요소들을 구조화된structured 정보형태로 나타낼때 사용
+            </p>
+        <P>이런 경우 목록속에 또다른목록 ul->ul,ul->ol형태 가능 ol->ul</P>
+        <h3>내가 좋아하는 점심메뉴</h3>
+        <ul>
+            <li>분식
+                <ul>
+                    <li>면류</li>
+                    <ul>
+                        <li>라면</li>
+                    </ul>
+
+                    <li>김밥</li>
+                    <li>우동</li> <!--체크-->
+                </ul>
+            </li>
+            <li>한식</li>
+                    <ul>
+                        <li>불고기</li>
+                        <li>감자탕</li>
+                        </ul>
+            <li>양식</li>
+        </ul>
+
+
+        <h2>네비게이션 구조 작성시 목록 사용</h2>
+        <p>웹 페이지의 gnb lnb fnb 등을 만들때 사용</p>
+
+        <h2>네이버 뉴스 gnb</h2>
+        <nav>
+        <ul>
+            <li>언론사별</li>
+            <li>정치</li>
+            <li>경제 </li>
+            <li>사회</li>
+        </ul>
+        </nav>
+
+
+
+
+
+<h2></h2><h2></h2><h2></h2>
 </body>
 </html>
