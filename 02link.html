@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>링크관련태그</title>
+</head>
+<body>
+<h1>링크관련태그</h1>
+<a id="top"></a> <!--책갈피-->
+<h2>개요</h2>
+<p>현재 페이지에서 다른 페이지나 다른 사이트로 연결되도록 만드는 요소</p>
+<P>이러한 요소를 하이퍼링크라 하며 간단히 링크라</P>
+<P>html에서는 a태그를 이용해서 이것을 만들수 있는데 href 속성으로 문서내 특정위치 연결할 페이지나
+   외부사이트를 지정할수 있음</P>
+<P>a태그 사이에는 링크를 설명할 텍스틀를 작성함</P>
+<p>링크의 기본색상은 파란색 클릭하면 보라색으오 바뀜</p>
+<p>한편 링크마우버튼으로 누르고 있을때 빨간색으로 표시</p>
+
+
+<div><a href="https://naver.com">네이버로 이동</a></div>
+<div><a href="https://www.google.co.kr/">구글로 이동</a> </div>
+<div><a href="https://finance.naver.com/">네이버 증권으로 이동</a></div>
+<div><a href="https://finance.daum.net/">다음 영화로 이동</a></div>
+
+<div><a href="http://localhost:63342/html5/01test1.html">어제 수업한거 (01text)</a></div><!--절대경로 -->
+<div><a href="01test1.html">어제 수업한거 (01text)</a></div><!--상대주소-->
+
+<h2>문서내 특정위치로 이동</h2>
+<P>링크를 책갈피도 생성할수도 잇는데
+   id라는 속성으로 책갈피이름를 지정하고 href 속성에 '$sharp;책갈피'를 지정하면
+ 문서내 만들어둔 측정위치로 이동할수 있음</P>
+<p>도한 href 속성에 '파일명$sharp;책갈피이름'지정하면 트걷ㅇ문서의 책갈피로 이동</p>
+<div><a href="#top">문서매위로</a></div>
+<div><a href="#01text.html#er">어제수업한거중
+  entify reference 로이동</a></div>
+<h2>링크로 메이로보내기</h2>
+<P>href 솏성에 mailto:라는 링클를 생성하면 이메일 클라이언트를 실행하거나 메일로 보낼 재용을 작성할수 있음</P>
+<div><a href="mailto:admin @naver.com">관리자에게 메일보내기</a></div>
+<P></P><P></P>
+
+</body>
+</html>
