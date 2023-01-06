@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>색상태그</title>
+</head>
+<body>
+<h1>색상관려태그</h1>
+<h2>html4에서의 색표현</h2>
+<P>html에서 색을 표현법 1. 색상명
+2.rcb색상걊 3.16진수 색상값등이 있다</P>
+<P>w3c에서 정한 표준색상은 16개</P>
+<P>단 주요 브라우져는 140개/P>
+<P>htmlcolorcodes.com을 참조 색상이름</P>
+<P>html의 색상관련 속성으로 색을 지정하는 것보다는 css를 통해 색상을 지정하는것을 추천</P>
+
+<div style="background: red; color: white">빨강</div>
+<div style="background: orange">주황</div>
+<div style="background: yellow">노랑</div>
+<div style="background: green">초록</div>
+<div style="background: blue">파랑</div>
+<div style="background: navy">남색</div>
+
+<hr>
+<p>16진수 색상은 rgb색상값을 16진수로 각각 변환한것</p><!-- 체크-->
+<P>r,g,b 색상값은 00~ff 범위를 가짐
+표기법은 $sharp; 다음에 3개의 16진수 값을 정의 </P>
+<div style="background: #FF0000; color: white">빨강</div>
+<div style="background: orange; color: white">주황</div>
+<div style="background: #FFFF00; color: black">노랑</div>
+<div style="background: green; color: white">초록</div> <!--3가지 방법으로 색을 표현가능 -->
+<div style="background: blue">파랑</div>
+<div style="background: navy">남색</div>
+
+<hr>
+<p>rgb  색상은 rgb색상값을 10진수로 각각 변환한것</p>
+<P>r,g,b 색상값은 00~f255 범위를 가짐
+  표기법은 rgb() 에 10진수로 정의
+rgb 색상에 투명도를 적용하렴년 rgba() 를 사용</P>
+<div style="background: rgb(255,0,0); color: white">빨강</div>
+<div style="background: orange; color: white">주황</div>
+<div style="background: rgb(2500,255,0); color: black">노랑</div>
+<div style="background: green; color: white">초록</div> <!--3가지 방법으로 색을 표현가능 -->
+<div style="background: rgb(0,0,255); color: white">파랑</div>
+<div style="background: navy">남색</div>
+
+<hr>
+<div style="background: rgba(255,0,0,0); color: white">빨강</div>
+<div style="background: rgba(255,0,0,0.2); color: white">빨강</div>
+<div style="background: rgba(255,0,0,0.4); color: white">빨강</div>
+<div style="background: rgba(255,0,0,0.6); color: white">빨강</div>
+<div style="background: rgba(255,0,0,0.8); color: white">빨강</div>
+<h2>html5에서의 색표현</h2>
+<p> html5에서 hsl/hsla 색상코드가 도입</p>
+<hr>
+<p>16진수 색상 vs rgb 색상 vs hsl 색상</p>
+
+
+<hr>
+<p>그외 hwb, cmyk 색상코드로도 색을 표현할수 있음</p>
+
+</body>
+</html>
