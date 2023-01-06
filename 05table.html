@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 관련 태그</title>
+  <style>/* embed css style */
+    <table { outline: 1px solid black; widh:850px;
+              outline-offset:-1px}
+  th,td{outline: 1px solid black; padding: 10px}
+  tr:nth-child(even) { background:aliceblue }/*짝수부분*/
+  tr:nth-child(odd) { background:aquamarine} /*홀수부분*/
+  tr:first-child { backgroud: beige}
+
+  tr { height:35px }
+  table:nth-of-type(2) { width: 600px }<!-- 두번재 테이블을 이렇게 조정한다는 의미 -->
+
+  /* 복잡한 표2에대한 스타일 너비지정*/
+  table:nth-of-type(5) { width: 850px}
+  table:nth-of-type(5) th { width: 141px }
+  table:nth-of-type(5) td { width: 141px }
+
+  /* 복잡한 표2에대한 스타일 너비지정 -- 다시 체크*/
+   table:nth-of-type(5) table th { width: 121px }
+   table:nth-of-type(5) table td { width: 121px }
+
+
+
+
+  </style>
+</head>
+<body>
+ <h1>테이블 관련 태그</h1>
+<h2>개요</h2>
+<p>여러종류 테이블을 일목요연하게 2차원형태로 표로 나타내기 위해 사용하는 요소</p>
+<p>table태그로 테이블시작을
+  tr태그로 테이블 행을
+  th태그로 테이블의 제목을
+  td태그는 테이블의본문을 나타</p>
+ <h3>사원 employees 테이블</h3>
+ <p>테이블의 디자인 관련 속성은 css를 이용(width, height, padding, border-collapse)</p>
+ <table >
+   <tr>
+     <th>사원번호</th>
+     <th>이름</th>
+     <th>이메일</th>
+     <th>수당</th>
+     <th>전화번호</th>
+     <th>직책</th>
+     <th>부서번호</th>
+     <table >
+       <tr>
+       <tr>
+       <tr>
+       <tr>
+       <tr>
+     <tr>
+       <td>100</td>
+       <td>king</td>
+       <td>steven</td>
+       <td>24000</td>
+        <td>123.4561.1235</td>
+
+   </tr>
+
+ </table>
+
+   <h2>복잡한표 만들기</h2>
+     <h2>복잡한 테이블 작성하려면 colspan/rowspan 속성을 사용</h2>
+     <h2>colspan 여러열 을 합쳐 하나의 열로
+     rowspan은 여러 행을 합쳐 하나의 행으로</h2>
+   <P>더 복잡한 표를 만들기 위해 표안에 표를 포함시킬수도 잇음 비추함</p>
+     <h3>복잡한 표</h3>
+   <img src="img/tmegjwhn.bmp" width="20%" height="20%">
+
+     <table>
+       <tr><td colspan="5">1</td><!--td>2</td><td>3</td><td>4</td><td>5</td--></tr>
+       <tr><td rowspan="2">6</td><td rowspan="2">7</td><td rowspan="2">8</td><td colspan="2" rowspan="2">9</td><!--td>10</td--></tr>
+       <tr><!--td>11</td><td>12</td><td>13</td--><!--td>14</td><td>15</td--></tr>
+       <tr><td colspan="2">16<!--/td><td>17</td--><td colspan="3">18</td><!--td>19</td><td>20</td--></tr>
+       <tr><td colspan="3">21<!--/td><td>22</td><td>23</td--><td rowspan="2">24</td><!--td>25</td--></tr> <!--합치는서 나오는 부분은  주석처리한다-->
+
+     </table>
+   <h2>테이블 너비 지정</h2>
+     <p>테이블 요소의 크기를 지정하는 단위는 px,%임</p>
+     <p>크기를 픽셀로 지정하는 경우 고정크기로 설정되어 브라우저의 크기에 상관업시이 테이블의 크기는 변화 없음</p>
+     <P>% 로 지정하는 경우가변크기로 설정되어 브라우저의 크기에 따라 테이블의 크기도 변함</P>
+
+   <table style="width= 850px; border: 1px solid red">
+     <tr><td>테이블1 (750px)</td><tr>
+
+     </table>
+     <table style="width= 45%; outline: 1px solid blue">
+       <tr><td>테이블2 (45%)</td><tr>
+     </tr></table>
+
+<p>복잡한 표</P>
+   <table style= "width = 50%; outline: 1px solid red">
+     <tr><th>훈련과정</th><td colspan="2">빅데이터분석(파이썬,자바기반)<br>
+       AI(머신러닝,딥러닝) &amp; RPA솔루션 개발</td>
+       <th>훈련기간</th><td colspan="2">2022-04-18 ~ 2022-10-19</td></tr>
+
+     <tr><th>평가일시</th><td>2022년 05월 04일</td>
+       <th>훈련생</th><td style="text-align: right">(인)</td>
+       <th>훈련교사</th><td>홍 길 동 (인)</td></tr>
+
+     <tr><td colspan="6" style="padding: 0"> <!
+       <table id="inner_table">
+         <tr><th colspan="2">교과목명</th>
+           <th>평가방법</th><th>배점</th><th>점수</th>
+           <th>총점</th><th>성취수준</th></tr>
+
+         <tr><th colspan="2" rowspan="2">데이터베이스</th>
+           <td>서술형/선택형</td>
+           <td>30</td><td>&nbsp;</td>
+           <td rowspan="2">&nbsp;</td>
+           <td rowspan="2">&nbsp;</td></tr>
+
+         <tr style="background: aliceblue"><td>포트폴리오</td>
+           <td>70</td><td>&nbsp;</td></tr>
+       </table>
+     </td></tr>
+
+     <tr>
+       <th>성취수준 환산</th><th>매우우수(5수준)</th><th>우수(4수준)</th>
+       <th>보통(3수준)</th><th>미흡(2수준)</th><th>매우미흡(1수준)</th></tr>
+     <tr><th>성취기준</th><td>90~100점</td><td>80~89점</td>
+       <td>70~79점</td><td>60~69점</td><td>60점미만</td></tr>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
