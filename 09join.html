@@ -1,134 +1,99 @@
 <!DOCTYPE html>
-<html lang="ko" xmlns="http://www.w3.org/1999/html">
+<html lang="ko">
 <head>
+    <meta charset="UTF-8">
     <meta charset="UTF-8">
     <title>회원가입폼</title>
 
-  <style>
-    td:first-child {text-align: right; font-weight: bold }
-    tr { height: 35px }
-     input, select {padding: 5px}
-     button { padding: 3px }
-     img { margin-left: -5px }
-  </style>
+    <style>
+        td:first-child {text-align: right; font-weight: bold }
+        tr { height: 35px }
+        input, select {padding: 5px}
+        button { padding: 3px }
+        img { margin-left: -5px }
+    </style>
 </head>
 <body>
 <h1>일반회원</h1>
+<form name="join">
+    <table style="width: 850px">
 
-<table style="width: 850px">
-  <form name="join">
-  <tr border="1">
-    <td style="width: 25%" text-align:right>이름</td>
-    <td style="width: 10%">&nbsp;</td>
-    <td><input type="text" name="name" readonly value="홍길동" ></td>
-  </tr>
+        <tr border="1">
+            <td style="width: 25%; text-align:right">이름</td>
+            <td style="width: 10%">&nbsp;</td>
+            <td><input type="text" name="name" readonly value="홍길동" ></td>
+        </tr>
 
-    <tr>
-      <td style=" text-align:right">주민번호</td>
-      <td>&nbsp;</td>
-      <td><input type="text" name="jumin1" readonly value="123456" size="7" maxlength="6" </td> -
-      <td><input type="text" name="jumin2" readonly value="1234567"  size="7" maxlength="7" </td>
-    </tr>
+        <tr>
+            <td style="text-align:right">주민번호</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="jumin1" readonly value="123456" size="7" maxlength="6"> -
+                <input type="text" name="jumin2" readonly value="1234567"  size="7" maxlength="7"></td>
+        </tr>
+        <tr>
+            <td style="width: 25%; text-align:right">이름</td>
+            <td style="width: 10%">&nbsp;</td>
+            <td><input type="text" name="name" readonly value="홍길동"> </td>
+        </tr>
 
-    <td style="width: 25%" text-align:right>이름</td>
-    <td style="width: 10%">&nbsp;</td>
-    <td><input type="text" name="name" readonly value="홍길동"> </td>
-    </tr>
+        <tr>
+            <td >아이디</td>
+            <td>&nbsp;</td>
+            <td style="font-size:9px; color: blue;"><input type="text" name="userid" size="18" maxlength="16" min="6">
+                6~26 자의 영문 소문자 숫자와 특수기호()만 사용할수 있습니다 </td>
+        </tr>
 
-    <tr>
-      <td >아이디</td>
-      <td>&nbsp;</td>
-      <td><input type="text" name="userid" size="18" maxlength="16" min="6"></td> -
-      6~26 자의 영문 소문자 숫자와 특수기호()만 사용할수 있습니다
-    </tr>
+        <tr>
+            <td >비밀번호</td>
+            <td>&nbsp;</td>
+            <td style="font-size:9px; color: blue;"><input type="password" name="passwl" size="10" maxlength="16" min="6">
+                이전 항목에서 입력했던 비밀 번호입력해주세요</td>
+        </tr>
+        <tr>
+            <td >우편번호</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="zip1" size="1" maxlength="3">
+                - <input type="text" name="zip2" size="1" maxlength="3">
+                <button type="button"> 우편번호 찾기 </button> </td>
+        </tr>
+        <tr>
+            <td >주소</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="addr1" size="25">
+                <input type="text" name="addr2" size="25" ></td>
+        </tr>
+        <tr>
+            <td >전자우편 주소</td>
+            <td>&nbsp;</td>
+            <td><input type="text" name="email1" size="12"> @
+                <input type="text" name="email2" size="12" >
+                <select name="email3">
+                    <option>선택하세요</option>
+                    <option>naver.com</option>
+                </select></td>
+        </tr>
+        <tr>
+            <td >개인연락처</td>
+            <td>&nbsp;</td>
+            <td><select name="phone1">
+                <option>국번</option>
+                <option>010</option>
+            </select></td>
+        </tr>
+        <tr>
+            <td >자동가입방지</td>
+            <td>&nbsp;</td>
+            <td>
+                <img src="img/captcha.png"><br>
+                <input type="text" name="phone2" size="15">
+                <button type="button">다른 captcha 보기</button></td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: center">
+                <button type="button" style="border-color:red;background-color:red; color:white;">입력완료</button>
+                <button type="button" style="border-color:blue;background-color: blue;color:white;">취소하기 </button>
 
-    <tr>
-      <td >비밀번호</td>
-      <td>&nbsp;</td>
-      <td><input type="password" name="passwl" size="10" maxlength="16" min="6">-
-     이전 항목에서 입력했던 비밀 번호입력해주세요</td>
-    </tr>
-<tr>
-      <td >우편번호</td>
-      <td>&nbsp;</td>
-      <td><input type="text" name="zip1" size="1" maxlength="3">
-        - <input type="text" name="zip2" size="1" maxlength="3">
-     <button type="button"> 우편번호 찾기 </button> </td>
-    </tr>
-    <tr>
-      <td >주소</td>
-      <td>&nbsp;</td>
-      <td><input type="text" name="addr1" size="25">
-        <input type="text" name="addr2" size="25" ></td>
-    </tr>
-    <tr>
-      <td >전자우편 주소</td>
-      <td>&nbsp;</td>
-      <td><input type="text" name="email1" size="12">
-        <input type="text" name="email2" size="12" >
-      <select name="email3">
-        <option>선택하세요</option>
-        <option>naver.com</option>
-      </select></td>
-    </tr>
-    <tr>
-      <td >개인연락처</td>
-      <td>&nbsp;</td>
-      <td><select name="phone1">
-        <option>국변</option>
-        <option>010</option>
-      </select></td>
-      <img src="img/captcha.png"><br>
-      <input type="text" name="phone2" size="15">
-      <button type="button">다른 captcha 보기</button></td>
-    </tr>
- <tr>
-      <td >자동가입방지</td>
-      <td>&nbsp;</td>
-      <td>
-      </select></td>
-      <img src="img/captcha.png"><br>
-      <input type="text" name="phone2" size="15">
-      <button type="button">다른 captcha 보기</button></td>
-    </tr>
-<tr>
-    <td colspan="3" style="text-align: center">
-      <button type="button">입력완료</button>
-      <button type="button">취소하기 </button>
-
-
-
-</table>
-
-
-
-
-
-
-
-
+            </td>
+        </tr>
+    </table>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
